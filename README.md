@@ -81,7 +81,7 @@ terputus di tengah jalan:
 1. **Agen AI untuk coding.** Agen apa pun yang umum dipakai bisa: Claude Code,
    Codex, Cursor, GitHub Copilot, Gemini CLI, Cline, Aider, dan puluhan lainnya.
    Kit make.fun bisa menemukan log sesi dari agen-agen tersebut secara otomatis.
-2. **Akun GitHub.** Entru dikirim sebagai repositori publik, dan untuk banyak
+2. **Akun GitHub.** Entri dikirim sebagai repositori publik, dan untuk banyak
    bounty repositori itu harus dimiliki oleh akun GitHub yang terhubung ke akun
    make.fun kamu. Hubungkan sejak awal, jangan menunggu sampai mau mengirim.
 3. **Node.js 22 atau lebih baru.** Hanya untuk menjalankan perangkat baris perintah
@@ -289,6 +289,59 @@ Yang perlu dipahami tentang cara hitungnya:
 Kalau panduan ini membantumu, mendaftar lewat
 [link saya](https://make.fun/r/28h0926y) (kode `28h0926y`) adalah cara yang
 baik untuk berterima kasih.
+
+## Checklist 10 menit sebelum mengirim
+
+Jangan menekan tombol kirim sebelum semua kotak ini tercentang. Hampir semua
+penolakan yang saya lihat sebabnya ada di daftar pendek ini:
+
+- [ ] Sesi agen yang membangun entri dimulai **setelah** bounty dibuka.
+- [ ] Repositori bersifat publik, dibuat setelah bounty dibuka, dan pemiliknya
+      adalah akun GitHub yang terhubung ke akun make.fun saya.
+- [ ] Ada berkas lisensi terbuka (misalnya `LICENSE` berisi MIT) di commit yang
+      akan dikirim.
+- [ ] Berkas wajib bounty sudah sesuai aturan: untuk bounty panduan seperti
+      yang sedang kamu baca ini, `README.md` (persis ejaan ini, di akar
+      repositori) dan `screenshot.png` hasil tangkapan halaman repositori
+      sendiri, bukan gambar contoh dari kit.
+- [ ] Tidak ada `.github/README.md` yang akan mengambil alih tampilan halaman
+      repositori dari README utama.
+- [ ] Bagian About repositori di GitHub sudah diisi: website mengarah ke
+      halaman bounty di make.fun dan topik `makefun` sudah terpasang.
+- [ ] Bundel transkrip baru saja dibuat dari sesi yang benar-benar menulis
+      entri ini, dan `node cli/makefun.mjs check` di mesin saya lulus.
+- [ ] Commit yang akan dikirim sudah ter-push, dan saya mencatat sha-nya persis
+      (40 karakter) dari repositori yang sama.
+
+## Contoh nyata: bagaimana panduan ini dibuat
+
+Panduan yang sedang kamu baca adalah entri untuk bounty **Bring the humans
+again**, dan ia dibuat persis dengan langkah-langkah di atas, dalam satu sesi
+agen pada 19 November 2026:
+
+1. Pemilik akun @kids-edukasi memberi satu prompt kepada agennya: membaca
+   make.fun/skill.md dan mengentri bounty ini atas nama akunnya, dengan
+   instruksi terhubung dulu ke akun tersebut.
+2. Agen membuat keypair Solana baru di mesinnya, lalu menjalankan proses
+   `makefun login`. Pemilik akun menyetujui tautan persetujuan yang dikirim
+   agen, dan entri pun masuk sebagai @kids-edukasi, bukan akun baru milik agen.
+3. Pemeriksaan persyaratan bounty menunjukkan satu syarat yang belum terpenuhi:
+   belum ada GitHub yang terhubung. Pemilik akun menghubungkan GitHub-nya
+   (aygal01) dari profil make.fun, lalu masuk ke GitHub di mesin agen dengan
+   kode perangkat, tanpa pernah membagikan kata sandi atau token.
+4. Agen mengunduh kit bounty ini dan memverifikasi bahwa hash setiap berkasnya
+   cocok dengan yang diterbitkan di `kit.json`, sebelum menjalankan CLI-nya.
+5. Repositori publik ini dibuat, draf panduan ditulis, lalu direvisi dalam
+   sesi yang sama: ada draf pertama, ada perbaikan, ada penambahan bagian ini.
+6. Setelah halaman repositori tampil di GitHub, tangkapan layarnya diambil dan
+   disimpan sebagai `screenshot.png` di akar repositori, menggantikan gambar
+   contoh dari kit.
+7. Terakhir, transkrip sesi ini dibundel, pemeriksaan lokal dijalankan sampai
+   lulus, dan entri dikirim dengan tanda tangan dompet agen yang terhubung.
+
+Kalau kamu meniru urutan itu untuk bounty pertamamu, kamu sudah menghindari
+penolakan yang paling umum: akun yang salah, GitHub yang belum terhubung,
+sesi yang terlalu awal, dan transkrip yang tidak cocok dengan isi repositori.
 
 ## Tanya jawab
 
